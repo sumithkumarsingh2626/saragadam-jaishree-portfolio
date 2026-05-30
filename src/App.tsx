@@ -39,36 +39,7 @@ const FpsLimiter = () => {
   return null;
 };
 
-const CinematicIntro = () => {
-  const [visible, setVisible] = useState(true);
-
-  useEffect(() => {
-    const timeout = window.setTimeout(() => setVisible(false), 5400);
-    return () => window.clearTimeout(timeout);
-  }, []);
-
-  if (!visible) return null;
-
-  return (
-    <div className="cinematic-intro" aria-hidden="true">
-      <div className="intro-vignette" />
-      <div className="intro-title">
-        <span>Welcome To My Page</span>
-      </div>
-      <div className="door-stage">
-        <div className="door-panel door-left">
-          <div className="door-grain" />
-          <div className="door-handle" />
-        </div>
-        <div className="door-panel door-right">
-          <div className="door-grain" />
-          <div className="door-handle" />
-        </div>
-      </div>
-      <div className="intro-landing" />
-    </div>
-  );
-};
+import Loader from "./components/Loader";
 
 const App = () => {
   const {
@@ -84,7 +55,7 @@ const App = () => {
   return (
     <>
       <div id="cover">
-        <CinematicIntro />
+        <Loader />
         <KeyboardControls map={KEYBOARD_MAP}>
           <Canvas
             dpr={dpr}

@@ -10,6 +10,7 @@ import Portal from "../portal/Portal";
 import Grass from "./Grass";
 import CinematicEffects from "./CinematicEffects";
 import Garden from "./Garden";
+import Nature from "./Nature";
 
 const Game = lazy(() => import("../game/Game"));
 const Projects = lazy(() => import("../projects/Projects"));
@@ -32,6 +33,7 @@ const World: React.FC = () => {
 
       {/* Portfolio content restored inside the forest environment. */}
       <Paths />
+      <Nature />
       <Portal />
       <Suspense fallback={null}>
         <Lamps />

@@ -10,7 +10,7 @@ import {
   Texture,
 } from "three";
 import { useGLTF, useAnimations } from "@react-three/drei";
-import { ThreeElements, useFrame, useThree } from "@react-three/fiber";
+import { ThreeElements, useThree } from "@react-three/fiber";
 
 type GLTFResult = Object3D & {
   geometry: BufferGeometry;
@@ -42,126 +42,8 @@ const CHARACTER_PALETTE: Record<string, string> = {
   "Material.006": "#101010",
 };
 
-const HAIR = "#101010";
-const BACKPACK = "#111822";
-const GLASSES = "#101318";
-const BUCKLE = "#c2a05f";
 
-const StudentDetails = ({ animation }: { animation: CharacterAnimationType }) => {
-  const ponytailRef = useRef<Group>(null);
-  const backpackRef = useRef<Group>(null);
 
-  useFrame(({ clock }) => {
-    const elapsed = clock.getElapsedTime();
-    const moving = animation !== "Idle";
-    const run = animation === "Run";
-    const stride = moving ? Math.sin(elapsed * (run ? 12.2 : 7.4)) : 0;
-    const bounce = moving ? Math.abs(stride) * (run ? 0.07 : 0.03) : 0;
-
-    if (ponytailRef.current) {
-      ponytailRef.current.rotation.x = -0.34 + stride * (run ? 0.14 : 0.07);
-      ponytailRef.current.rotation.z = stride * 0.04;
-    }
-    if (backpackRef.current) {
-      backpackRef.current.position.y = 0.99 + bounce;
-      backpackRef.current.rotation.x = -0.08 + stride * 0.025;
-    }
-  });
-
-  return (
-    <group>
-      <group position={[0, 1.48, 0]}>
-        <mesh castShadow receiveShadow position={[0, 0.22, -0.02]} scale={[0.32, 0.17, 0.28]}>
-          <sphereGeometry args={[1, 32, 14]} />
-          <meshStandardMaterial color={HAIR} roughness={0.92} />
-        </mesh>
-        <mesh castShadow receiveShadow position={[-0.14, 0.08, 0.17]} rotation={[0.18, 0, 0.42]} scale={[0.065, 0.28, 0.05]}>
-          <capsuleGeometry args={[0.38, 0.34, 8, 14]} />
-          <meshStandardMaterial color={HAIR} roughness={0.96} />
-        </mesh>
-        <mesh castShadow receiveShadow position={[0.14, 0.08, 0.17]} rotation={[0.18, 0, -0.42]} scale={[0.065, 0.28, 0.05]}>
-          <capsuleGeometry args={[0.38, 0.34, 8, 14]} />
-          <meshStandardMaterial color={HAIR} roughness={0.96} />
-        </mesh>
-        <mesh castShadow receiveShadow position={[0, 0.11, 0.18]} scale={[0.18, 0.08, 0.045]}>
-          <sphereGeometry args={[1, 18, 10]} />
-          <meshStandardMaterial color={HAIR} roughness={0.96} />
-        </mesh>
-        <group ref={ponytailRef} position={[0, 0.21, -0.28]}>
-          <mesh castShadow receiveShadow position={[0, 0.05, 0]} scale={[0.11, 0.11, 0.11]}>
-            <sphereGeometry args={[1, 18, 12]} />
-            <meshStandardMaterial color={HAIR} roughness={0.94} />
-          </mesh>
-          <mesh castShadow receiveShadow position={[0, -0.2, -0.08]} rotation={[0.16, 0, 0]} scale={[0.1, 0.4, 0.1]}>
-            <capsuleGeometry args={[0.42, 0.52, 10, 18]} />
-            <meshStandardMaterial color={HAIR} roughness={0.98} />
-          </mesh>
-        </group>
-        <group position={[0, 0.05, 0.295]}>
-          <mesh position={[-0.105, 0, 0.003]}>
-            <circleGeometry args={[0.07, 28]} />
-            <meshPhysicalMaterial
-              color="#cfe7f1"
-              transparent
-              opacity={0.18}
-              roughness={0.05}
-              metalness={0}
-              transmission={0.55}
-              depthWrite={false}
-            />
-          </mesh>
-          <mesh position={[0.105, 0, 0.003]}>
-            <circleGeometry args={[0.07, 28]} />
-            <meshPhysicalMaterial
-              color="#cfe7f1"
-              transparent
-              opacity={0.18}
-              roughness={0.05}
-              metalness={0}
-              transmission={0.55}
-              depthWrite={false}
-            />
-          </mesh>
-          <mesh position={[-0.105, 0, 0]} scale={[1.08, 0.76, 1]}>
-            <torusGeometry args={[0.082, 0.011, 10, 36]} />
-            <meshStandardMaterial color={GLASSES} roughness={0.32} metalness={0.55} />
-          </mesh>
-          <mesh position={[0.105, 0, 0]} scale={[1.08, 0.76, 1]}>
-            <torusGeometry args={[0.082, 0.011, 10, 36]} />
-            <meshStandardMaterial color={GLASSES} roughness={0.32} metalness={0.55} />
-          </mesh>
-          <mesh rotation={[0, 0, Math.PI / 2]}>
-            <cylinderGeometry args={[0.007, 0.007, 0.09, 10]} />
-            <meshStandardMaterial color={GLASSES} roughness={0.32} metalness={0.55} />
-          </mesh>
-          <mesh position={[-0.185, 0.01, -0.11]} rotation={[Math.PI / 2, 0.18, 0]}>
-            <cylinderGeometry args={[0.006, 0.006, 0.24, 10]} />
-            <meshStandardMaterial color={GLASSES} roughness={0.32} metalness={0.55} />
-          </mesh>
-          <mesh position={[0.185, 0.01, -0.11]} rotation={[Math.PI / 2, -0.18, 0]}>
-            <cylinderGeometry args={[0.006, 0.006, 0.24, 10]} />
-            <meshStandardMaterial color={GLASSES} roughness={0.32} metalness={0.55} />
-          </mesh>
-        </group>
-      </group>
-
-      <group ref={backpackRef} position={[0, 0.99, -0.33]}>
-        <mesh castShadow receiveShadow scale={[0.34, 0.5, 0.15]}>
-          <capsuleGeometry args={[0.72, 0.5, 10, 22]} />
-          <meshStandardMaterial color={BACKPACK} roughness={0.88} metalness={0.03} />
-        </mesh>
-        <mesh castShadow receiveShadow position={[0, 0.13, -0.12]} scale={[0.2, 0.16, 0.035]}>
-          <boxGeometry args={[1, 1, 1]} />
-          <meshStandardMaterial color="#1d2b3c" roughness={0.8} />
-        </mesh>
-        <mesh castShadow receiveShadow position={[0, -0.06, 0.13]} scale={[0.035, 0.035, 0.012]}>
-          <sphereGeometry args={[1, 12, 8]} />
-          <meshStandardMaterial color={BUCKLE} roughness={0.42} metalness={0.25} />
-        </mesh>
-      </group>
-    </group>
-  );
-};
 
 const Character = forwardRef<Group, CharacterProps>(function Character(
   { animation = "Idle", ...props },
@@ -217,7 +99,6 @@ const Character = forwardRef<Group, CharacterProps>(function Character(
 
   return (
     <group ref={group} {...props} dispose={null}>
-      <StudentDetails animation={animation} />
       <group name="Root_Scene">
         <group name="RootNode">
           <group
