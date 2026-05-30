@@ -1,0 +1,179 @@
+[33mThe `define` option contains an object with "PATH" for "process.env" key. It looks like you may have passed the entire `process.env` object to `define`, which can unintentionally expose all environment variables. This poses a security risk and is discouraged.[39m
+[2m2:50:14 PM[22m [31m[1m[vite][22m[39m [31mInternal server error: C:\Users\BITTU KUMAR SINGH\Downloads\Jai portfolio\threejs-portfolio\src\base\Text.tsx: Unexpected token (86:2)
+
+[0m [90m 84 |[31m
+ [90m 85 |[31m [36mexport[31m [36mdefault[31m [33mBaseText[31m[33m;[31m
+[31m[1m>[22m[31m[90m 86 |[31m   [33m...[31mprops
+ [90m    |[31m   [31m[1m^[22m[31m
+ [90m 87 |[31m }) [33m=>[31m {
+ [90m 88 |[31m   [36mif[31m (type [33m===[31m [32m"3d"[31m) {
+ [90m 89 |[31m     [36mreturn[31m ([0m[39m
+  Plugin: [35mvite:react-babel[39m
+  File: [36mC:/Users/BITTU KUMAR SINGH/Downloads/Jai portfolio/threejs-portfolio/src/base/Text.tsx[39m:86:2
+[33m  84 |  
+  85 |  export default BaseText;
+  86 |    ...props
+     |    ^
+  87 |  }) => {
+  88 |    if (type === "3d") {[39m
+      at constructor (C:\Users\BITTU KUMAR SINGH\Downloads\Jai portfolio\threejs-portfolio\node_modules\@babel\parser\lib\index.js:365:19)
+      at TypeScriptParserMixin.raise (C:\Users\BITTU KUMAR SINGH\Downloads\Jai portfolio\threejs-portfolio\node_modules\@babel\parser\lib\index.js:6616:19)
+      at TypeScriptParserMixin.unexpected (C:\Users\BITTU KUMAR SINGH\Downloads\Jai portfolio\threejs-portfolio\node_modules\@babel\parser\lib\index.js:6636:16)
+      at TypeScriptParserMixin.parseExprAtom (C:\Users\BITTU KUMAR SINGH\Downloads\Jai portfolio\threejs-portfolio\node_modules\@babel\parser\lib\index.js:11459:22)
+      at TypeScriptParserMixin.parseExprAtom (C:\Users\BITTU KUMAR SINGH\Downloads\Jai portfolio\threejs-portfolio\node_modules\@babel\parser\lib\index.js:4776:20)
+      at TypeScriptParserMixin.parseExprSubscripts (C:\Users\BITTU KUMAR SINGH\Downloads\Jai portfolio\threejs-portfolio\node_modules\@babel\parser\lib\index.js:11098:23)
+      at TypeScriptParserMixin.parseUpdate (C:\Users\BITTU KUMAR SINGH\Downloads\Jai portfolio\threejs-portfolio\node_modules\@babel\parser\lib\index.js:11083:21)
+      at TypeScriptParserMixin.parseMaybeUnary (C:\Users\BITTU KUMAR SINGH\Downloads\Jai portfolio\threejs-portfolio\node_modules\@babel\parser\lib\index.js:11063:23)
+      at TypeScriptParserMixin.parseMaybeUnary (C:\Users\BITTU KUMAR SINGH\Downloads\Jai portfolio\threejs-portfolio\node_modules\@babel\parser\lib\index.js:9854:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (C:\Users\BITTU KUMAR SINGH\Downloads\Jai portfolio\threejs-portfolio\node_modules\@babel\parser\lib\index.js:10916:61)
+      at TypeScriptParserMixin.parseExprOps (C:\Users\BITTU KUMAR SINGH\Downloads\Jai portfolio\threejs-portfolio\node_modules\@babel\parser\lib\index.js:10921:23)
+      at TypeScriptParserMixin.parseMaybeConditional (C:\Users\BITTU KUMAR SINGH\Downloads\Jai portfolio\threejs-portfolio\node_modules\@babel\parser\lib\index.js:10898:23)
+      at TypeScriptParserMixin.parseMaybeAssign (C:\Users\BITTU KUMAR SINGH\Downloads\Jai portfolio\threejs-portfolio\node_modules\@babel\parser\lib\index.js:10848:21)
+      at TypeScriptParserMixin.parseMaybeAssign (C:\Users\BITTU KUMAR SINGH\Downloads\Jai portfolio\threejs-portfolio\node_modules\@babel\parser\lib\index.js:9803:20)
+      at TypeScriptParserMixin.parseExpressionBase (C:\Users\BITTU KUMAR SINGH\Downloads\Jai portfolio\threejs-portfolio\node_modules\@babel\parser\lib\index.js:10801:23)
+      at C:\Users\BITTU KUMAR SINGH\Downloads\Jai portfolio\threejs-portfolio\node_modules\@babel\parser\lib\index.js:10797:39
+      at TypeScriptParserMixin.allowInAnd (C:\Users\BITTU KUMAR SINGH\Downloads\Jai portfolio\threejs-portfolio\node_modules\@babel\parser\lib\index.js:12438:16)
+      at TypeScriptParserMixin.parseExpression (C:\Users\BITTU KUMAR SINGH\Downloads\Jai portfolio\threejs-portfolio\node_modules\@babel\parser\lib\index.js:10797:17)
+      at TypeScriptParserMixin.parseStatementContent (C:\Users\BITTU KUMAR SINGH\Downloads\Jai portfolio\threejs-portfolio\node_modules\@babel\parser\lib\index.js:12912:23)
+      at TypeScriptParserMixin.parseStatementContent (C:\Users\BITTU KUMAR SINGH\Downloads\Jai portfolio\threejs-portfolio\node_modules\@babel\parser\lib\index.js:9525:18)
+      at TypeScriptParserMixin.parseStatementLike (C:\Users\BITTU KUMAR SINGH\Downloads\Jai portfolio\threejs-portfolio\node_modules\@babel\parser\lib\index.js:12784:17)
+      at TypeScriptParserMixin.parseModuleItem (C:\Users\BITTU KUMAR SINGH\Downloads\Jai portfolio\threejs-portfolio\node_modules\@babel\parser\lib\index.js:12761:17)
+      at TypeScriptParserMixin.parseBlockOrModuleBlockBody (C:\Users\BITTU KUMAR SINGH\Downloads\Jai portfolio\threejs-portfolio\node_modules\@babel\parser\lib\index.js:13333:36)
+      at TypeScriptParserMixin.parseBlockBody (C:\Users\BITTU KUMAR SINGH\Downloads\Jai portfolio\threejs-portfolio\node_modules\@babel\parser\lib\index.js:13326:10)
+      at TypeScriptParserMixin.parseProgram (C:\Users\BITTU KUMAR SINGH\Downloads\Jai portfolio\threejs-portfolio\node_modules\@babel\parser\lib\index.js:12639:10)
+      at TypeScriptParserMixin.parseTopLevel (C:\Users\BITTU KUMAR SINGH\Downloads\Jai portfolio\threejs-portfolio\node_modules\@babel\parser\lib\index.js:12629:25)
+      at TypeScriptParserMixin.parse (C:\Users\BITTU KUMAR SINGH\Downloads\Jai portfolio\threejs-portfolio\node_modules\@babel\parser\lib\index.js:14505:25)
+      at TypeScriptParserMixin.parse (C:\Users\BITTU KUMAR SINGH\Downloads\Jai portfolio\threejs-portfolio\node_modules\@babel\parser\lib\index.js:10143:18)
+      at parse (C:\Users\BITTU KUMAR SINGH\Downloads\Jai portfolio\threejs-portfolio\node_modules\@babel\parser\lib\index.js:14539:38)
+      at parser (C:\Users\BITTU KUMAR SINGH\Downloads\Jai portfolio\threejs-portfolio\node_modules\@babel\core\lib\parser\index.js:41:34)
+      at parser.next (<anonymous>)
+      at normalizeFile (C:\Users\BITTU KUMAR SINGH\Downloads\Jai portfolio\threejs-portfolio\node_modules\@babel\core\lib\transformation\normalize-file.js:51:37)
+      at normalizeFile.next (<anonymous>)
+      at run (C:\Users\BITTU KUMAR SINGH\Downloads\Jai portfolio\threejs-portfolio\node_modules\@babel\core\lib\transformation\index.js:22:50)
+      at run.next (<anonymous>)
+      at transform (C:\Users\BITTU KUMAR SINGH\Downloads\Jai portfolio\threejs-portfolio\node_modules\@babel\core\lib\transform.js:22:33)
+      at transform.next (<anonymous>)
+      at step (C:\Users\BITTU KUMAR SINGH\Downloads\Jai portfolio\threejs-portfolio\node_modules\gensync\index.js:261:32)
+      at C:\Users\BITTU KUMAR SINGH\Downloads\Jai portfolio\threejs-portfolio\node_modules\gensync\index.js:273:13
+      at async.call.result.err.err (C:\Users\BITTU KUMAR SINGH\Downloads\Jai portfolio\threejs-portfolio\node_modules\gensync\index.js:223:11)
+      at C:\Users\BITTU KUMAR SINGH\Downloads\Jai portfolio\threejs-portfolio\node_modules\gensync\index.js:189:28
+      at C:\Users\BITTU KUMAR SINGH\Downloads\Jai portfolio\threejs-portfolio\node_modules\@babel\core\lib\gensync-utils\async.js:67:7
+      at C:\Users\BITTU KUMAR SINGH\Downloads\Jai portfolio\threejs-portfolio\node_modules\gensync\index.js:113:33
+      at step (C:\Users\BITTU KUMAR SINGH\Downloads\Jai portfolio\threejs-portfolio\node_modules\gensync\index.js:287:14)
+      at C:\Users\BITTU KUMAR SINGH\Downloads\Jai portfolio\threejs-portfolio\node_modules\gensync\index.js:273:13
+      at async.call.result.err.err (C:\Users\BITTU KUMAR SINGH\Downloads\Jai portfolio\threejs-portfolio\node_modules\gensync\index.js:223:11)
+[2m2:50:14 PM[22m [31m[1m[vite][22m[39m [31mInternal server error: C:\Users\BITTU KUMAR SINGH\Downloads\Jai portfolio\threejs-portfolio\src\base\Text.tsx: Unexpected token (86:2)
+
+[0m [90m 84 |[31m
+ [90m 85 |[31m [36mexport[31m [36mdefault[31m [33mBaseText[31m[33m;[31m
+[31m[1m>[22m[31m[90m 86 |[31m   [33m...[31mprops
+ [90m    |[31m   [31m[1m^[22m[31m
+ [90m 87 |[31m }) [33m=>[31m {
+ [90m 88 |[31m   [36mif[31m (type [33m===[31m [32m"3d"[31m) {
+ [90m 89 |[31m     [36mreturn[31m ([0m[39m
+  Plugin: [35mvite:react-babel[39m
+  File: [36mC:/Users/BITTU KUMAR SINGH/Downloads/Jai portfolio/threejs-portfolio/src/base/Text.tsx[39m:86:2
+[33m  84 |  
+  85 |  export default BaseText;
+  86 |    ...props
+     |    ^
+  87 |  }) => {
+  88 |    if (type === "3d") {[39m
+      at constructor (C:\Users\BITTU KUMAR SINGH\Downloads\Jai portfolio\threejs-portfolio\node_modules\@babel\parser\lib\index.js:365:19)
+      at TypeScriptParserMixin.raise (C:\Users\BITTU KUMAR SINGH\Downloads\Jai portfolio\threejs-portfolio\node_modules\@babel\parser\lib\index.js:6616:19)
+      at TypeScriptParserMixin.unexpected (C:\Users\BITTU KUMAR SINGH\Downloads\Jai portfolio\threejs-portfolio\node_modules\@babel\parser\lib\index.js:6636:16)
+      at TypeScriptParserMixin.parseExprAtom (C:\Users\BITTU KUMAR SINGH\Downloads\Jai portfolio\threejs-portfolio\node_modules\@babel\parser\lib\index.js:11459:22)
+      at TypeScriptParserMixin.parseExprAtom (C:\Users\BITTU KUMAR SINGH\Downloads\Jai portfolio\threejs-portfolio\node_modules\@babel\parser\lib\index.js:4776:20)
+      at TypeScriptParserMixin.parseExprSubscripts (C:\Use[2m3:17:06 PM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to load url /src/hooks/useCameraMovement.ts (resolved id: C:/Users/BITTU KUMAR SINGH/Downloads/Jai portfolio/threejs-portfolio/src/hooks/useCameraMovement.ts) in C:/Users/BITTU KUMAR SINGH/Downloads/Jai portfolio/threejs-portfolio/src/hooks/usePlayerMovement.ts. Does the file exist?
+[2m3:21:50 PM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to load url /src/components/world/Garden.tsx (resolved id: C:/Users/BITTU KUMAR SINGH/Downloads/Jai portfolio/threejs-portfolio/src/components/world/Garden.tsx) in C:/Users/BITTU KUMAR SINGH/Downloads/Jai portfolio/threejs-portfolio/src/components/world/World.tsx. Does the file exist?
+:10916:61)
+      at TypeScriptParserMixin.parseExprOps (C:\Users\BITTU KUMAR SINGH\Downloads\Jai portfolio\threejs-portfolio\node_modules\@babel\parser\lib\index.js:10921:23)
+      at TypeScriptParserMixin.parseMaybeConditional (C:\Users\BITTU KUMAR SINGH\Downloads\Jai portfolio\threejs-portfolio\node_modules\@babel\parser\lib\index.js:10898:23)
+      at TypeScriptParserMixin.parseMaybeAssign (C:\Users\BITTU KUMAR SINGH\Downloads\Jai portfolio\threejs-portfolio\node_modules\@babel\parser\lib\index.js:10848:21)
+      at TypeScriptParserMixin.parseMaybeAssign (C:\Users\BITTU KUMAR SINGH\Downloads\Jai portfolio\threejs-portfolio\node_modules\@babel\parser\lib\index.js:9803:20)
+      at TypeScriptParserMixin.parseExpressionBase (C:\Users\BITTU KUMAR SINGH\Downloads\Jai portfolio\threejs-portfolio\node_modules\@babel\parser\lib\index.js:10801:23)
+      at C:\Users\BITTU KUMAR SINGH\Downloads\Jai portfolio\threejs-portfolio\node_modules\@babel\parser\lib\index.js:10797:39
+      at TypeScriptParserMixin.allowInAnd (C:\Users\BITTU KUMAR SINGH\Downloads\Jai portfolio\threejs-portfolio\node_modules\@babel\parser\lib\index.js:12438:16)
+      at TypeScriptParserMixin.parseExpression (C:\Users\BITTU KUMAR SINGH\Downloads\Jai portfolio\threejs-portfolio\node_modules\@babel\parser\lib\index.js:10797:17)
+      at TypeScriptParserMixin.parseStatementContent (C:\Users\BITTU KUMAR SINGH\Downloads\Jai portfolio\threejs-portfolio\node_modules\@babel\parser\lib\index.js:12912:23)
+      at TypeScriptParserMixin.parseStatementContent (C:\Users\BITTU KUMAR SINGH\Downloads\Jai portfolio\threejs-portfolio\node_modules\@babel\parser\lib\index.js:9525:18)
+      at TypeScriptParserMixin.parseStatementLike (C:\Users\BITTU KUMAR SINGH\Downloads\Jai portfolio\threejs-portfolio\node_modules\@babel\parser\lib\index.js:12784:17)
+      at TypeScriptParserMixin.parseModuleItem (C:\Users\BITTU KUMAR SINGH\Downloads\Jai portfolio\threejs-portfolio\node_modules\@babel\parser\lib\index.js:12761:17)
+      at TypeScriptParserMixin.parseBlockOrModuleBlockBody (C:\Users\BITTU KUMAR SINGH\Downloads\Jai portfolio\threejs-portfolio\node_modules\@babel\parser\lib\index.js:13333:36)
+      at TypeScriptParserMixin.parseBlockBody (C:\Users\BITTU KUMAR SINGH\Downloads\Jai portfolio\threejs-portfolio\node_modules\@babel\parser\lib\index.js:13326:10)
+      at TypeScriptParserMixin.parseProgram (C:\Users\BITTU KUMAR SINGH\Downloads\Jai portfolio\threejs-portfolio\node_modules\@babel\parser\lib\index.js:12639:10)
+      at TypeScriptParserMixin.parseTopLevel (C:\Users\BITTU KUMAR SINGH\Downloads\Jai portfolio\threejs-portfolio\node_modules\@babel\parser\lib\index.js:12629:25)
+      at TypeScriptParserMixin.parse (C:\Users\BITTU KUMAR SINGH\Downloads\Jai portfolio\threejs-portfolio\node_modules\@babel\parser\lib\index.js:14505:25)
+      at TypeScriptParserMixin.parse (C:\Users\BITTU KUMAR SINGH\Downloads\Jai portfolio\threejs-portfolio\node_modules\@babel\parser\lib\index.js:10143:18)
+      at parse (C:\Users\BITTU KUMAR SINGH\Downloads\Jai portfolio\threejs-portfolio\node_modules\@babel\parser\lib\index.js:14539:38)
+      at parser (C:\Users\BITTU KUMAR SINGH\Downloads\Jai portfolio\threejs-portfolio\node_modules\@babel\core\lib\parser\index.js:41:34)
+      at parser.next (<anonymous>)
+      at normalizeFile (C:\Users\BITTU KUMAR SINGH\Downloads\Jai portfolio\threejs-portfolio\node_modules\@babel\core\lib\transformation\normalize-file.js:51:37)
+      at normalizeFile.next (<anonymous>)
+      at run (C:\Users\BITTU KUMAR SINGH\Downloads\Jai portfolio\threejs-portfolio\node_modules\@babel\core\lib\transformation\index.js:22:50)
+      at run.next (<anonymous>)
+      at transform (C:\Users\BITTU KUMAR SINGH\Downloads\Jai portfolio\threejs-portfolio\node_modules\@babel\core\lib\transform.js:22:33)
+      at transform.next (<anonymous>)
+      at step (C:\Users\BITTU KUMAR SINGH\Downloads\Jai portfolio\threejs-portfolio\node_modules\gensync\index.js:261:32)
+      at C:\Users\BITTU KUMAR SINGH\Downloads\Jai portfolio\threejs-portfolio\node_modules\gensync\index.js:273:13
+      at async.call.result.err.err (C:\Users\BITTU KUMAR SINGH\Downloads\Jai portfolio\threejs-portfolio\node_modules\gensync\index.js:223:11)
+      at C:\Users\BITTU KUMAR SINGH\Downloads\Jai portfolio\threejs-portfolio\node_modules\gensync\index.js:189:28
+      at C:\Users\BITTU KUMAR SINGH\Downloads\Jai portfolio\threejs-portfolio\node_modules\@babel\core\lib\gensync-utils\async.js:67:7
+      at C:\Users\BITTU KUMAR SINGH\Downloads\Jai portfolio\threejs-portfolio\node_modules\gensync\index.js:113:33
+      at step (C:\Users\BITTU KUMAR SINGH\Downloads\Jai portfolio\threejs-portfolio\node_modules\gensync\index.js:287:14)
+      at C:\Users\BITTU KUMAR SINGH\Downloads\Jai portfolio\threejs-portfolio\node_modules\gensync\index.js:273:13
+      at async.call.result.err.err (C:\Users\BITTU KUMAR SINGH\Downloads\Jai portfolio\threejs-portfolio\node_modules\gensync\index.js:223:11)
+[2m2:50:25 PM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: C:\Users\BITTU KUMAR SINGH\Downloads\Jai portfolio\threejs-portfolio\src\base\Text.tsx: Unexpected token (86:2)
+
+[0m [90m 84 |[39m
+ [90m 85 |[39m [36mexport[39m [36mdefault[39m [33mBaseText[39m[33m;[39m
+[31m[1m>[22m[39m[90m 86 |[39m   [33m...[39mprops
+ [90m    |[39m   [31m[1m^[22m[39m
+ [90m 87 |[39m }) [33m=>[39m {
+ [90m 88 |[39m   [36mif[39m (type [33m===[39m [32m"3d"[39m) {
+ [90m 89 |[39m     [36mreturn[39m ([0m
+  Plugin: [35mvite:react-babel[39m
+  File: [36mC:/Users/BITTU KUMAR SINGH/Downloads/Jai portfolio/threejs-portfolio/src/base/Text.tsx[39m:86:2
+[33m  84 |  
+  85 |  export default BaseText;
+  86 |    ...props
+     |    ^
+  87 |  }) => {
+  88 |    if (type === "3d") {[39m
+[2m2:50:25 PM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: C:\Users\BITTU KUMAR SINGH\Downloads\Jai portfolio\threejs-portfolio\src\base\Text.tsx: Unexpected token (86:2)
+
+[0m [90m 84 |[39m
+ [90m 85 |[39m [36mexport[39m [36mdefault[39m [33mBaseText[39m[33m;[39m
+[31m[1m>[22m[39m[90m 86 |[39m   [33m...[39mprops
+ [90m    |[39m   [31m[1m^[22m[39m
+ [90m 87 |[39m }) [33m=>[39m {
+ [90m 88 |[39m   [36mif[39m (type [33m===[39m [32m"3d"[39m) {
+ [90m 89 |[39m     [36mreturn[39m ([0m
+  Plugin: [35mvite:react-babel[39m
+  File: [36mC:/Users/BITTU KUMAR SINGH/Downloads/Jai portfolio/threejs-portfolio/src/base/Text.tsx[39m:86:2
+[33m  84 |  
+  85 |  export default BaseText;
+  86 |    ...props
+     |    ^
+  87 |  }) => {
+  88 |    if (type === "3d") {[39m
+[2m2:50:34 PM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: C:\Users\BITTU KUMAR SINGH\Downloads\Jai portfolio\threejs-portfolio\src\base\Text.tsx: Unexpected token (86:2)
+
+[0m [90m 84 |[39m
+ [90m 85 |[39m [36mexport[39m [36mdefault[39m [33mBaseText[39m[33m;[39m
+[31m[1m>[22m[39m[90m 86 |[39m   [33m...[39mprops
+ [90m    |[39m   [31m[1m^[22m[39m
+ [90m 87 |[39m }) [33m=>[39m {
+ [90m 88 |[39m   [36mif[39m (type [33m===[39m [32m"3d"[39m) {
+ [90m 89 |[39m     [36mreturn[39m ([0m
+  Plugin: [35mvite:react-babel[39m
+  File: [36mC:/Users/BITTU KUMAR SINGH/Downloads/Jai portfolio/threejs-portfolio/src/base/Text.tsx[39m:86:2
+[33m  84 |  
+  85 |  export default BaseText;
+  86 |    ...props
+     |    ^
+  87 |  }) => {
+  88 |    if (type === "3d") {[39m
+[2m2:51:59 PM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to load url /src/base/Text.tsx (resolved id: C:/Users/BITTU KUMAR SINGH/Downloads/Jai portfolio/threejs-portfolio/src/base/Text.tsx) in C:/Users/BITTU KUMAR SINGH/Downloads/Jai portfolio/threejs-portfolio/src/components/portal/Portal.tsx. Does the file exist?
+[2m2:51:59 PM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to load url /src/base/Text.tsx (resolved id: C:/Users/BITTU KUMAR SINGH/Downloads/Jai portfolio/threejs-portfolio/src/base/Text.tsx) in C:/Users/BITTU KUMAR SINGH/Downloads/Jai portfolio/threejs-portfolio/src/components/portal/Portal.tsx. Does the file exist?
+[2m2:51:59 PM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to load url /src/base/Text.tsx (resolved id: C:/Users/BITTU KUMAR SINGH/Downloads/Jai portfolio/threejs-portfolio/src/base/Text.tsx) in C:/Users/BITTU KUMAR SINGH/Downloads/Jai portfolio/threejs-portfolio/src/components/portal/Portal.tsx. Does the file exist?
