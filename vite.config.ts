@@ -14,9 +14,7 @@ export default defineConfig(({ mode }) => {
       svgrPlugin(),
       visualizer({ open: process.env.ANALYZE === "true" }),
     ],
-    define: {
-      "process.env": process.env,
-    },
+
     server: {
       port: 3000,
     },
